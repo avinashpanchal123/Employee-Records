@@ -1,13 +1,18 @@
+import "./App.css";
+import Dashboard from "./components/Dashboard";
+import Navbar from "./components/Navbar";
+import AddEmployee from "./components/AddEmployee";
+import {BrowserRouter ,Route} from "react-router-dom";
 
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     <h1>
-       Hello Avinash
-     </h1>
-    </div>
+    <BrowserRouter>
+
+   <Navbar/>
+  <Route path="/" component={Dashboard}/>
+  <Route path="add"  component={AddEmployee}/>
+    </BrowserRouter>
   );
 }
 
